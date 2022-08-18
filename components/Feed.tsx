@@ -8,11 +8,9 @@ interface IProps {
 }
 
 const Feed = ({ topic }: IProps) => {
-  const { data, error } = !topic
-    ? useQuery(GET_ALL_POSTS)
-    : useQuery(GET_ALL_POSTS_BY_TOPIC, {
-        variables: { topic: topic },
-      });
+  const { data, error } = useQuery(!topic ? GET_ALL_POSTS : GET_ALL_POSTS_BY_TOPIC, {
+    variables: { topic: topic },
+  });
 
   const posts: Post[] = !topic ? data?.getPostList : data?.getPostListByTopic;
 
