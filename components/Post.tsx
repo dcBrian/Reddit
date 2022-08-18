@@ -27,7 +27,7 @@ const Post = ({ post, disable: disableBorder }: IProps) => {
   const [vote, setVote] = useState<boolean>();
   const upVote = async (isUpvote: boolean) => {
     if (!session) {
-      toast("You need to be sign in to vote!");
+      toast("You need to sign in to vote!");
       return;
     }
 
@@ -86,7 +86,7 @@ const Post = ({ post, disable: disableBorder }: IProps) => {
           !disableBorder && "hover:border-gray-400 cursor-pointer "
         }`}
       >
-        <div className="flex flex-col items-center justify-start space-y-1 rounded-l-md bg-gray-50 p-4 text-gray-400">
+        <div className="flex flex-col items-center justify-start space-y-1 rounded-l-md bg-gray-50 p-2 sm:p-4 text-gray-400">
           <ArrowUpIcon
             onClick={() => upVote(true)}
             className={`voteButton hover:text-red-400 ${vote && "text-red-400"}`}
@@ -121,7 +121,7 @@ const Post = ({ post, disable: disableBorder }: IProps) => {
           <div className="flex space-x-4 text-gray-400">
             <div className="postButtons">
               <ChatAltIcon className="h-6 w-6" />
-              <p className="">{post.comments.length} Comments</p>
+              <p className="hidden sm:inline">{post.comments.length} Comments</p>
             </div>
 
             <div className="postButtons">

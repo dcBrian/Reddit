@@ -27,21 +27,19 @@ const Header = () => {
           <Image src="https://links.papareact.com/fqy" objectFit="contain" layout="fill" />
         </Link>
       </div>
-      <div className="mx-5 flex items-center xl:min-w-[300px]">
+      <div className="mx-5 hidden sm:flex items-center xl:min-w-[300px]">
         <HomeIcon className="w-5 h-5" />
-        <p className="ml-2 flex-1 hidden lg:inline ">Home</p>
+        <p className="ml-2 flex-1 hidden lg:flex ">Home</p>
         <ChevronDownIcon className="w-5 h-5" />
       </div>
 
-      <form
-        action=""
-        className="flex flex-1 items-center space-x-2 border-gray-200 rounded-sm bg-gray-100 px-3 py-1 "
-      >
-        <SearchIcon className="w-6 h-6 text-gray-400" />
+      <form className="flex flex-1 items-center space-x-2 border-gray-200 rounded-sm bg-gray-100 px-3 py-1 ml-5 sm:mx-0">
+        <SearchIcon className="w-6 h-6 text-gray-400 hidden sm:inline" />
         <input
-          className="flex-1 bg-transparent outline-none"
+          size={1}
+          className="flex-1 bg-transparent outline-none text-xs sm:text-base"
           type="text"
-          placeholder="Search reddit"
+          placeholder="Search"
         />
 
         {/* Submit the form with Enter key */}
