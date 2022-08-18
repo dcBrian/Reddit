@@ -1,6 +1,8 @@
 ## Reddit
 
-This is a Reddit clone made with Nextjs to showcase some of my knowledge.
+This is a Reddit clone made with Nextjs.
+
+The main purpose of this project is to see how long/easy it would be to implement a UI like reddit and its main features (subreddit, posts, comments, votes) using Graphql and Postgresql.
 <br />
 
 <p align="center">
@@ -23,6 +25,14 @@ This is a Reddit clone made with Nextjs to showcase some of my knowledge.
 - [Supabase - Open source Firebase alternative](https://supabase.com/)
 - [StepZen - GraphQL as a Service](https://stepzen.com/)
 - [NextAuth.js - Open-source authentication solution](https://next-auth.js.org/)
+
+## Features
+
+- Authentication with official Reddit account
+- Create a Post on an existing/new Subreddit
+- Add Comments/Votes on a specific Post
+- Add on a specific Post
+-
 
 ## Contact
 

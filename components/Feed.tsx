@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
 import { GET_ALL_POSTS, GET_ALL_POSTS_BY_TOPIC } from "../graphql/queries";
+import Loader from "./Loader";
 import Post from "./Post";
 
 interface IProps {
@@ -13,6 +14,8 @@ const Feed = ({ topic }: IProps) => {
   });
 
   const posts: Post[] = !topic ? data?.getPostList : data?.getPostListByTopic;
+
+  if (!posts) return <Loader />;
 
   return (
     <div className="mt-5 space-y-4 flex-1">

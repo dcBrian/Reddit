@@ -11,12 +11,12 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import ReactTimeago from "react-timeago";
 import Avatar from "./Avatar";
-import { Jelly } from "@uiball/loaders";
 import { useSession } from "next-auth/react";
 import toast from "react-hot-toast";
 import { GET_ALL_VOTES_BY_POST_ID } from "../graphql/queries";
 import { ADD_VOTE } from "../graphql/mutations";
 import { useMutation, useQuery } from "@apollo/client";
+import Loader from "./Loader";
 interface IProps {
   post: Post;
   disable?: boolean;
@@ -72,13 +72,8 @@ const Post = ({ post, disable: disableBorder }: IProps) => {
     return displayed;
   };
 
-  if (!post) {
-    return (
-      <div className="flex w-full items-center justify-center p-10 text-xl">
-        <Jelly size={50} color="#FF4501" />
-      </div>
-    );
-  }
+  if (!post) return <Loader />;
+
   return (
     <Link href={`/post/${post.id}`}>
       <div
@@ -102,7 +97,7 @@ const Post = ({ post, disable: disableBorder }: IProps) => {
             <Avatar seed={post.username} />
             <p className="text-xs text-gray-400">
               <Link href={`/subreddit/${post?.subreddit[0]?.topic}`}>
-                <span className="font-bold text-black hover:text-blue-400">
+                <span className="font-bold text-black hover:text-blue-400 cursor-pointer ">
                   r/{post.subreddit[0]?.topic}
                 </span>
               </Link>{" "}
