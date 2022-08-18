@@ -2,7 +2,7 @@
 
 This is a Reddit clone made with Nextjs.
 
-The main purpose of this project is to see how long/easy it would be to implement a UI like reddit and its main features (subreddit, posts, comments, votes) using Graphql and Postgresql.
+The purpose of this project is to showcase my knowledge by reproducing the main features of Reddit: (subreddit, posts, comments, votes) using Graphql and Postgresql.
 <br />
 
 <p align="center">
