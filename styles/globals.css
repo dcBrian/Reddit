@@ -3,14 +3,25 @@
 @tailwind utilities;
 
 @layer components {
-  .icon {
-    @apply h-9 w-6 cursor-pointer rounded-sm lg:p-1 lg:hover:bg-gray-100;
-  }
-  .voteButton {
-    @apply h-6 w-6 cursor-pointer hover:bg-gray-200 p-1 rounded-md;
-  }
+    .icon {
+        @apply h-7 w-7 p-1 text-gray-600 cursor-pointer lg:hover:bg-gray-100;
+    }
+    .voteButton {
+        @apply h-6 w-6 cursor-pointer hover:bg-gray-200 p-1 rounded-md;
+    }
 
-  .postButtons {
-    @apply flex items-center space-x-1 text-sm font-semibold p-2 hover:bg-gray-100 cursor-pointer rounded-sm;
-  }
+    .postButtons {
+        @apply flex items-center space-x-1 text-sm font-semibold p-2 hover:bg-gray-200 cursor-pointer rounded-sm;
+    }
+
+    .card {
+        @apply rounded-md border border-gray-300 bg-white shadow-sm;
+    }
+
+    .input {
+        @apply hover:border-blue-500 border-gray-200 border;
+    }
+    .button {
+        @apply rounded-full p-[6px] text-sm font-semibold text-white hover:opacity-90;
+    }
 }
