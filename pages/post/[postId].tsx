@@ -85,24 +85,21 @@ const PostPage = () => {
                             </button>
                         </form>
                     </div>
-                    <div className='-my-5 rounded-b-md border border-t-0 border-gray-300 bg-white py-5 px-10'>
-                        <hr className='py-2' />
+
+                    <div className='-mt-5 rounded-b-md border border-t-0 border-gray-300 bg-white py-5 px-10 '>
+                        <hr className='py-2 ' />
                         {post?.comments.map((comment) => (
-                            <div
-                                className='relative flex items-center space-x-2 space-y-5'
-                                key={comment.id}
-                            >
-                                <hr className='absolute top-10 left-7 z-0 h-16 border' />
-                                <div className='z-50'>
-                                    <Avatar seed={comment.username} />
-                                </div>
-                                <div className='flex  flex-col'>
-                                    <p className='py-2 text-xs text-gray-400'>
-                                        <span className='front-semibold text-gray-600'>
+                            <div className='relative flex flex-col px-2 py-2' key={comment.id}>
+                                <div className='flex items-center space-x-2'>
+                                    <Avatar seed={comment.username} small />
+                                    <p className='text-xs text-gray-400 -mb-[6px]'>
+                                        <span className='front-bold text-gray-600 mr-2'>
                                             {comment.username}
-                                        </span>{' '}
+                                        </span>
                                         <ReactTimeago date={comment.created_at} />
                                     </p>
+                                </div>
+                                <div className='pl-10'>
                                     <p>{comment.text}</p>
                                 </div>
                             </div>

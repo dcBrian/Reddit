@@ -20,11 +20,7 @@ const Header = () => {
         <div className='sticky top-0 z-50 flex bg-white shadow-sm items-center h-[49px] px-5 space-x-3'>
             <div className='relative h-10 w-20 flex-shrink-0 cursor-pointer'>
                 <Link href='/'>
-                    <Image
-                        src='https://links.papareact.com/fqy'
-                        objectFit='contain'
-                        layout='fill'
-                    />
+                    <Image src='/reddit_logo.png' objectFit='contain' layout='fill' />
                 </Link>
             </div>
 

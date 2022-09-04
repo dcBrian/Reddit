@@ -26,7 +26,7 @@ const HomeBox = (props: Props) => {
                     communities.
                 </p>
             </div>
-            <div className='flex flex-col pb-4 space-y-2'>
+            <div className='flex flex-col pb-2 space-y-2'>
                 <button className='button w-full bg-blue-500'>Create Post</button>
 
                 <button className='button w-full bg-white text-blue-500 border-blue-500 border'>

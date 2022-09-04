@@ -110,10 +110,11 @@ const Postbox = ({ subreddit }: IProps) => {
     return (
         <form className='card p-2 ' onSubmit={onSubmit}>
             <div className='flex items-center space-x-3 '>
-                <Avatar />
+                <Avatar seed={session?.user?.name} />
                 <input
                     {...register('postTitle', { required: true })}
                     disabled={!session}
+                    autoComplete='off'
                     type='text'
                     className={`rounded-md flex-1 bg-gray-50 p-2 pl-5 outline-none ${
                         session ? 'input' : 'border border-gray-200'
