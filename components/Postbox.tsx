@@ -141,6 +141,7 @@ const Postbox = ({ subreddit }: IProps) => {
                     <div className='flex items-center px-2'>
                         <p className='min-w-[90px]'>Body:</p>
                         <input
+                            autoComplete='off'
                             className='m-2 flex-1 bg-blue-50 outline-none p-2 text-sm'
                             {...register('postBody')}
                             type='text'
@@ -152,6 +153,7 @@ const Postbox = ({ subreddit }: IProps) => {
                         <div className='flex items-center px-2'>
                             <p className='min-w-[90px]'>Subreddit:</p>
                             <input
+                                autoComplete='off'
                                 className='m-2 flex-1 bg-blue-50 outline-none p-2 text-sm'
                                 {...register('subreddit', { required: true })}
                                 type='text'
@@ -164,6 +166,7 @@ const Postbox = ({ subreddit }: IProps) => {
                         <div className='flex items-center px-2'>
                             <p className='min-w-[90px]'>Image URL:</p>
                             <input
+                                autoComplete='off'
                                 className='m-2 flex-1 bg-blue-50 outline-none p-2'
                                 {...register('postImage')}
                                 type='text'
