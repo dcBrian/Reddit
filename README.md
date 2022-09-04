@@ -4,7 +4,7 @@
   <br>
 </h1>
 
-<h4 align="center">This is a partial Reddit clone made with <a href="https://nextjs.org/" target="_blank">Next.js</a>.<br>The purpose of this project is to showcase my knowledge by reproducing some features of Reddit.
+<h4 align="center">This is a partial Reddit clone made with <a href="https://nextjs.org/" target="_blank">Next.js</a>.<br>The purpose of this project is to showcase my knowledge by reproducing some features of Reddit, but also to get a first experience with GraphQL.
 </h4>
 
 <p align="center">
@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  <!-- <img src="/images/reddit.gif?raw=true"/> -->
+  <img src="/images/reddit.gif?raw=true"/>
 </p>
 
 <p align="center">
