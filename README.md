@@ -31,15 +31,12 @@
   <a href="https://reddit-ebon.vercel.app/">View Demo</a>
 </p>
 
-## Key Features
+## Features
 
-* Responsive layout (mobile, tablet, pc)
-* Server side Rendering
-* Images optimization
-* Authentication with official Reddit account
-* Create a Post on an existing / new Subreddit
-* Add Comments / Votes on a specific Post
-* View all Posts related to a subreddit
+- Authentication with official Reddit account
+- Create a Post on an existing / new Subreddit
+- Add Comments / Votes on a specific Post
+- View all Posts related to a subreddit
 
 ## How To Use
 
