@@ -1,10 +1,19 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import axios from 'axios';
+import { NextApiRequest, NextApiResponse } from "next";
+import axios from "axios";
 
-const URL = process.env.SUPABASE_URL || '';
+const URL = process.env.SUPABASE_URL || "";
 
-export default function handler(request: NextApiRequest, response: NextApiResponse) {
-  axios.defaults.headers['apikey'] = process.env.SUPABASE_ANON || '';
-  axios.get(URL);
+const config = {
+  headers: {
+    apikey: process.env.SUPABASE_ANON,
+    Authorization: `Bearer ${process.env.SUPABASE_ANON}`,
+  },
+};
+
+export default function handler(
+  request: NextApiRequest,
+  response: NextApiResponse
+) {
+  axios.get(URL, config);
   return response.end(`ok`);
 }
